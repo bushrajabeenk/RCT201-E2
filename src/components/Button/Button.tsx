@@ -22,6 +22,7 @@ const Button = ({
 }: ButtonProps) => {
   return (
     <ButtonStyled
+      data-testid="btn-box"
       size={size}
       variant={variant}
       disabled={disabled}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { PageStyled } from "./Pagination.styled";
+import "./Pagination.css";
 
 type PaginationProps = {
   count: number;
@@ -17,9 +17,13 @@ const Pagination = (props: PaginationProps) => {
       className="pageContainer"
       style={{ display: "flex" }}
     >
-      <PageStyled onClick={() => setSelect(select - 1)} className="box1">
+      <div
+        data-testid="prev"
+        onClick={() => setSelect(select - 1)}
+        className="box1"
+      >
         Previous
-      </PageStyled>
+      </div>
 
       {pages.map((el, ind) => {
         return (
@@ -33,9 +37,13 @@ const Pagination = (props: PaginationProps) => {
         );
       })}
 
-      <PageStyled onClick={() => setSelect(select + 1)} className="box1">
+      <div
+        data-testid="nex"
+        onClick={() => setSelect(select + 1)}
+        className="box1"
+      >
         Next
-      </PageStyled>
+      </div>
     </div>
   );
 };
