@@ -1,4 +1,3 @@
-import React from "react";
 import { AvatarWrapperStyled, NameStyled, AvatarStyled } from "./Avatar.styled";
 
 type AvatarProps = {
@@ -9,7 +8,7 @@ type AvatarProps = {
 const Avatar = ({ name, src, size = "sm" }: AvatarProps) => {
   const strgs = name.split(" ");
   return (
-    <AvatarWrapperStyled hasSrc={!!src} size={size} name={name}>
+    <AvatarWrapperStyled data-testid="avatar-cont" hasSrc={!!src} size={size} name={name}>
       {src ? (
         <AvatarStyled src={src} alt={name} />
       ) : (

@@ -1,4 +1,3 @@
-import React from "react";
 import { FaClipboard } from "react-icons/fa";
 import { ComponentWrapper, VariantWrapper } from "./App.styled";
 import { Avatar } from "./components/Avatar";
